@@ -1,13 +1,13 @@
 # lab-wifi
 
-![lab-wifi history](img/histori.jpg)
+![](img/histori.jpg)
 
-Virtual lab for wireless hacking simulation using [mac80211_hwsim](https://www.kernel.org/doc/html/v6.9/networking/mac80211_hwsim/mac80211_hwsim.html).
+Lab virtual untuk simulasi **Wi-Fi hacking** menggunakan [mac80211_hwsim](https://www.kernel.org/doc/html/v6.9/networking/mac80211_hwsim/mac80211_hwsim.html).
 
-## Requirements
+## Persyaratan
 
-- Kali Linux 2026.1+
-- Root access (`sudo`)
+* Sistem operasi Linux
+* Akses root (`sudo`)
 
 ## Setup Lab
 
@@ -18,19 +18,20 @@ git clone https://github.com/fixploit03/lab-wifi
 cd lab-wifi
 ```
 
-## Install Tools (optional)
+## Install Tools (Opsional)
 
 ```bash
+# hanya untuk kali linux
 sudo apt install -y kali-tools-802-11 kali-tools-wireless
 ```
 
-## Usage
+## Penggunaan
 
 ```bash
-sudo ./lab-wifi.sh start   # start the lab
-sudo ./lab-wifi.sh stop    # stop the lab
+sudo ./lab-wifi.sh start   # menjalankan lab
+sudo ./lab-wifi.sh stop    # menghentikan lab
 ```
-  
-## License
+
+## Lisensi
 
 [MIT](LICENSE) - Rofi (Fixploit03)
