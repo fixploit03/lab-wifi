@@ -1,10 +1,10 @@
-## Wi-Fi WPA2-Personal
+# Wi-Fi WPA2-Personal
 Wi-Fi WPA2-Personal adalah jaringan Wi-Fi yang menggunakan enkripsi dengan autentikasi berbasis [PSK (Pre-Shared Key)](https://en.wikipedia.org/wiki/Pre-shared_key), yaitu satu password sama yang dipakai semua client. Jika PSK bocor, trafik yang terenkripsi bisa didekripsi oleh pihak yang mengetahuinya.
 
 ### Karakteristik
 - **Autentikasi**: PSK
 - **Enkripsi**: AES-CCMP
-- **Forward Secrecy**: Tidak
+- **Forward Secrecy**: Tidak ada
 - **PMF**: 0 (tidak aktif)
 - **Kerentanan**: Dictionary attack / brute-force attack secara offline jika handshake berhasil ditangkap dan password yang digunakan lemah
 
