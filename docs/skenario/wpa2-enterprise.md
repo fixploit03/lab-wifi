@@ -1,5 +1,4 @@
 ## Wi-Fi WPA2-Enterprise
-
 Wi-Fi WPA2-Enterprise adalah jaringan Wi-Fi yang menggunakan enkripsi dengan autentikasi berbasis [802.1X/EAP](https://en.wikipedia.org/wiki/IEEE_802.1X), yaitu setiap client memiliki kredensial (username dan password, atau sertifikat) masing-masing yang diverifikasi oleh [RADIUS server](https://en.wikipedia.org/wiki/RADIUS). Berbeda dengan PSK, tidak ada satu password bersama yang dipakai oleh semua client.
 
 ### Karakteristik
