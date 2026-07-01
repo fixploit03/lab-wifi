@@ -5,9 +5,8 @@
 Lab virtual untuk simulasi **Wi-Fi hacking** menggunakan [mac80211_hwsim](https://www.kernel.org/doc/html/v6.9/networking/mac80211_hwsim/mac80211_hwsim.html).
 
 ## Persyaratan
-
-* [Kali Linux](https://www.kali.org/)
-* Akses root ([sudo](https://idwebhost.com/blog/sudo-adalah/))
+- [Kali Linux](https://www.kali.org/)
+- Akses root ([sudo](https://idwebhost.com/blog/sudo-adalah/))
 
 ## Setup Lab
 
@@ -34,17 +33,15 @@ sudo ./lab-wifi.sh stop    # menghentikan lab
 ```
 
 ## Skenario Lab
-
 Lab ini terdiri dari **5 Access Point (AP)** dengan konfigurasi keamanan yang berbeda-beda. Masing-masing AP memiliki **1 Station (STA)** yang terhubung. Berikut jenis keamanan yang digunakan:
 
-| No | Jenis Keamanan | Keterangan |
-|:--:|:--|:--|
-| 1 | OPN | Tanpa enkripsi |
-| 2 | WPA2-Personal | PSK |
-| 3 | WPA2-Enterprise | 802.1X |
-| 4 | WPA3 Transition Mode | WPA2 + WPA3 |
-| 5 | WPA3-Personal | SAE |
+| No | Jenis Keamanan | Keterangan | Detail |
+|:--:|:--|:--|:--:|
+| 1 | OPN | Tanpa enkripsi | [Lihat](https://github.com/fixploit03/lab-wifi/blob/main/docs/skenario/opn.md) |
+| 2 | WPA2-Personal | PSK | [Lihat](https://github.com/fixploit03/lab-wifi/blob/main/docs/skenario/wpa2-personal.md) |
+| 3 | WPA2-Enterprise | 802.1X | [Lihat](https://github.com/fixploit03/lab-wifi/blob/main/docs/skenario/wpa2-enterprise.md) |
+| 4 | WPA3 Transition Mode | WPA2 + WPA3 | [Lihat](https://github.com/fixploit03/lab-wifi/blob/main/docs/skenario/wpa3-transition-mode.md) |
+| 5 | WPA3-Personal | SAE | [Lihat](https://github.com/fixploit03/lab-wifi/blob/main/docs/skenario/wpa3-personal.md) |
   
 ## Lisensi
-
 [MIT](LICENSE) - Rofi (Fixploit03)
