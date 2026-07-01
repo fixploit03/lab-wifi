@@ -18,19 +18,19 @@ git clone https://github.com/fixploit03/lab-wifi
 cd lab-wifi
 ```
 
-## Usage
-
-```bash
-sudo ./lab-wifi.sh start   # start the lab
-sudo ./lab-wifi.sh stop    # stop the lab
-```
-
 ## Install Tools (optional)
 
 ```bash
 sudo apt install -y kali-tools-802-11 kali-tools-wireless
 ```
 
+## Usage
+
+```bash
+sudo ./lab-wifi.sh start   # start the lab
+sudo ./lab-wifi.sh stop    # stop the lab
+```
+  
 ## License
 
 [MIT](LICENSE) - Rofi (Fixploit03)
