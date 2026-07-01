@@ -9,11 +9,11 @@ Wi-Fi WPA2-Enterprise adalah jaringan Wi-Fi yang menggunakan enkripsi dengan aut
 - Trafik terenkripsi menggunakan [AES-CCMP](https://en.wikipedia.org/wiki/CCMP_(cryptography))
 - Rentan terhadap serangan seperti [evil twin](https://en.wikipedia.org/wiki/Evil_twin_(wireless_networks)) atau [rogue AP](https://en.wikipedia.org/wiki/Rogue_access_point) jika client tidak memvalidasi sertifikat server dengan benar
 
-### Skenario
+### Tujuan
 Pada lab ini, tujuannya adalah:
 - Mengetahui SSID target
 - Mengetahui metode EAP yang digunakan
 - Menangkap kredensial pengguna
-- Dapat terhubung dengannya
+- Dapat terhubung dengan AP
 
 > Selamat mencoba ^_^
