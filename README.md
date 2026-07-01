@@ -12,8 +12,14 @@ Lab virtual untuk simulasi **Wi-Fi hacking** menggunakan [mac80211_hwsim](https:
 ## Setup Lab
 
 ```bash
+# debian/ubuntu
 sudo apt update
 sudo apt install -y hostapd dnsmasq wpasupplicant isc-dhcp-client aircrack-ng iw macchanger network-manager iproute2 openssl iperf3 git
+
+# arch linux
+sudo pacman -Syu
+sudo pacman -S --needed hostapd dnsmasq wpa_supplicant dhclient aircrack-ng iw macchanger networkmanager iproute2 openssl iperf3 git
+
 git clone https://github.com/fixploit03/lab-wifi
 cd lab-wifi
 ```
