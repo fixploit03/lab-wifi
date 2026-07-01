@@ -42,6 +42,6 @@ Lab ini terdiri dari **5 Access Point (AP)** dengan konfigurasi keamanan yang be
 | 3 | WPA2-Enterprise | 802.1X | [Lihat](https://github.com/fixploit03/lab-wifi/blob/main/docs/skenario/wpa2-enterprise.md) |
 | 4 | WPA3 Transition Mode | WPA2 + WPA3 | [Lihat](https://github.com/fixploit03/lab-wifi/blob/main/docs/skenario/wpa3-transition-mode.md) |
 | 5 | WPA3-Personal | SAE | [Lihat](https://github.com/fixploit03/lab-wifi/blob/main/docs/skenario/wpa3-personal.md) |
-  
+
 ## Lisensi
 [MIT](LICENSE) - Rofi (Fixploit03)
