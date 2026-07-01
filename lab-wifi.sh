@@ -34,6 +34,11 @@
 #
 ###############################################################################
 
+if [[ "${EUID}" -ne 0 ]]; then
+	echo "Run as root!"
+	exit 1
+fi
+
 source src/cleanup_ns.sh
 
 usage(){
@@ -75,4 +80,3 @@ case "${1}" in
 		usage
 		;;
 esac
-
