@@ -12,6 +12,6 @@ Pada lab ini, tujuannya adalah:
 - Mengetahui SSID target
 - Menangkap 4-way handshake
 - Mengetahui password target
-- Dapat terhubung dengannya
+- Dapat terhubung dengan AP
 
 > Selamat mencoba ^_^
