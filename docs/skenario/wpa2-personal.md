@@ -10,6 +10,7 @@ Wi-Fi WPA2-Personal adalah jaringan Wi-Fi yang menggunakan enkripsi dengan auten
 
 ### Skenario
 Pada lab ini, tujuannya adalah:
+- Mengetahui SSID target
 - Menangkap 4-way handshake
 - Mengetahui password target
 - Dapat terhubung dengannya
