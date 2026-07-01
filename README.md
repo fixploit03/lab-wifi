@@ -24,6 +24,8 @@ cd lab-wifi
 sudo apt install -y kali-tools-802-11 kali-tools-wireless
 ```
 
+Perintah di atas akan menginstal semua tools yang terdapat dalam metapackage [802-11](https://www.kali.org/tools/kali-meta/#kali-tools-802-11) dan [wireless](https://www.kali.org/tools/kali-meta/#kali-tools-wireless) Kali Linux.
+
 ## Penggunaan
 
 ```bash
@@ -31,6 +33,18 @@ sudo ./lab-wifi.sh start   # menjalankan lab
 sudo ./lab-wifi.sh stop    # menghentikan lab
 ```
 
+## Skenario Lab
+
+Lab ini terdiri dari **5 Access Point (AP)** dengan konfigurasi keamanan yang berbeda-beda. Masing-masing AP memiliki **1 Station (STA)** yang terhubung. Berikut jenis keamanan yang digunakan:
+
+| No | Jenis Keamanan | Keterangan |
+|:--:|:--|:--|
+| 1 | OPN | Tanpa enkripsi |
+| 2 | WPA2-Personal | PSK |
+| 3 | WPA2-Enterprise | 802.1X |
+| 4 | WPA3 Transition Mode | WPA2 + WPA3 |
+| 5 | WPA3-Personal | SAE |
+  
 ## Lisensi
 
 [MIT](LICENSE) - Rofi (Fixploit03)
