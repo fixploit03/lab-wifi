@@ -17,7 +17,7 @@ git clone https://github.com/fixploit03/lab-wifi
 cd lab-wifi
 ```
 
-## Install Tools
+## Instalasi Tools
 
 ```bash
 sudo apt install -y kali-tools-802-11 kali-tools-wireless
