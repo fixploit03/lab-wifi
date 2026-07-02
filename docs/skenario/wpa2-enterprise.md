@@ -1,4 +1,5 @@
 # Wi-Fi WPA2-Enterprise
+
 Wi-Fi WPA2-Enterprise adalah jaringan Wi-Fi yang terenkripsi dengan autentikasi berbasis 802.1X/EAP. Setiap client memiliki kredensial masing-masing (username dan password, atau sertifikat) yang diverifikasi oleh RADIUS server, berbeda dengan PSK yang menggunakan satu password bersama untuk semua client.
 
 ### Karakteristik
@@ -9,6 +10,7 @@ Wi-Fi WPA2-Enterprise adalah jaringan Wi-Fi yang terenkripsi dengan autentikasi 
 - **Kerentanan**: Evil twin / rogue AP jika client tidak memvalidasi sertifikat server dengan benar
 
 ### Tujuan
+
 Pada lab ini, tujuannya adalah:
 - Mengetahui SSID target
 - Mengetahui metode EAP yang digunakan
