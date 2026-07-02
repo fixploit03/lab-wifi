@@ -1,5 +1,7 @@
 # Writeup Wi-Fi OPN
 
+Berikut ini adalah langkah-langkah untuk menyelesaikan lab Wi-Fi dengan skenario Wi-Fi OPN.
+
 ## Langkah-Langkah
 
 #### 1. Lihat interface wireless:
