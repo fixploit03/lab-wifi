@@ -12,14 +12,4 @@ Wi-Fi OPN adalah jaringan Wi-Fi yang tidak menggunakan enkripsi. Artinya, data y
 - Mengetahui SSID target
 - Dapat terhubung dengan AP
 
-## Tools
-- `iwconfig`
-- `airmon-ng`
-- `airodump-ng`
-- `aireplay-ng`
-- `wpa_supplicant`
-- `dhclient`
-- `ip`
-- `ping`
-  
 > Selamat mencoba ^_^
