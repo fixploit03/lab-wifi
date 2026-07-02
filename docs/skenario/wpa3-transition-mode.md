@@ -9,9 +9,7 @@ Wi-Fi WPA3 Transition Mode adalah jaringan Wi-Fi yang menjalankan WPA2 dan WPA3 
 - **PMF**: 1 (opsional)
 - **Kerentanan**: Downgrade attack, client WPA3 bisa dipaksa terhubung lewat jalur WPA2-PSK yang lebih lemah, sehingga rentan terhadap serangan offline seperti pada WPA2-Personal
 
-### Tujuan
-
-Pada lab ini, tujuannya adalah:
+## Tujuan
 - Mengetahui SSID target
 - Menangkap 4-way handshake
 - Mengetahui password target
