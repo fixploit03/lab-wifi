@@ -39,6 +39,8 @@ if [[ "${EUID}" -ne 0 ]]; then
 	exit 1
 fi
 
+source src/change_mac.sh
+source src/check_dependencies.sh
 source src/cleanup_ns.sh
 
 usage(){
@@ -51,10 +53,13 @@ if [[ "${#}" -ne 1 ]]; then
 fi
 
 start_lab(){
+	check_dependencies
 	modprobe mac80211_hwsim radios=12
 	cleanup_ns start
 	airmon-ng check kill
 
+	change_mac wlan0
+	change_mac wlan1
 	bash ap/opn.sh
 	bash ap/wpa2-personal.sh
 	bash ap/wpa2-enterprise.sh
@@ -63,7 +68,7 @@ start_lab(){
 }
 
 stop_lab(){
-	killall -9 hostapd dnsmasq wpa_supplicant dhclient iperf3
+	killall hostapd dnsmasq wpa_supplicant dhclient iperf3
 	cleanup_ns
 	modprobe -r mac80211_hwsim
 	systemctl restart NetworkManager
