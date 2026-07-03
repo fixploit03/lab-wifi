@@ -3,7 +3,7 @@
 # check_dependencies.sh
 
 check_dependencies() {
-	local dependencies missing
+	local dependencies missing cmd i pkg
 
 	dependencies=("hostapd" "dnsmasq" "wpa_supplicant" "dhclient" "iperf3")
 	missing=()
