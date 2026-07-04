@@ -57,15 +57,15 @@ start_lab(){
 	check_dependencies
 	modprobe mac80211_hwsim radios=12
 	cleanup_ns start
-	airmon-ng check kill
+	airmon-ng check kill &>/dev/null
 
-	change_mac wlan0
-	change_mac wlan1
-	bash ap/opn.sh
-	bash ap/wpa2-personal.sh
-	bash ap/wpa2-enterprise.sh
-	bash ap/wpa3-transition.sh
-	bash ap/wpa3-personal.sh
+	change_mac wlan0 &>/dev/null
+	change_mac wlan1 &>/dev/null
+	bash ap/opn.sh &>/dev/null
+	bash ap/wpa2-personal.sh &>/dev/null
+	bash ap/wpa2-enterprise.sh &>/dev/null
+	bash ap/wpa3-transition.sh &>/dev/null
+	bash ap/wpa3-personal.sh &>/dev/null
 }
 
 stop_lab(){
