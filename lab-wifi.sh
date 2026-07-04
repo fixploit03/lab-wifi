@@ -53,6 +53,7 @@ if [[ "${#}" -ne 1 ]]; then
 fi
 
 start_lab(){
+	echo "[*] Starting the lab..."
 	check_dependencies
 	modprobe mac80211_hwsim radios=12
 	cleanup_ns start
@@ -68,6 +69,7 @@ start_lab(){
 }
 
 stop_lab(){
+	echo "[*] Stopping the lab"
 	killall hostapd dnsmasq wpa_supplicant dhclient iperf3
 	cleanup_ns
 	modprobe -r mac80211_hwsim
