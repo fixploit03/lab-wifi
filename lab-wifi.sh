@@ -69,7 +69,7 @@ start_lab(){
 }
 
 stop_lab(){
-	echo "[*] Stopping the lab"
+	echo "[*] Stopping the lab..."
 	killall hostapd dnsmasq wpa_supplicant dhclient iperf3
 	cleanup_ns
 	modprobe -r mac80211_hwsim
