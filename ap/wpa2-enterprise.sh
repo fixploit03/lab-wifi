@@ -8,6 +8,7 @@ source "${base_dir}/src/change_mac.sh"
 source "${base_dir}/src/detect_phy.sh"
 source "${base_dir}/src/setup_ns.sh"
 source "${base_dir}/src/setup_ip.sh"
+source "${base_dir}/src/setup_txpower.sh"
 source "${base_dir}/src/setup_ap.sh"
 source "${base_dir}/src/setup_dhcp_server.sh"
 source "${base_dir}/src/setup_sta.sh"
@@ -24,6 +25,7 @@ wpa_supplicant_conf="${base_dir}/conf/wpa2-enterprise/wpa_supplicant.conf"
 priv_key=/etc/hostapd/server.key
 pub_key=/etc/hostapd/server.pem
 eap_user=/etc/hostapd/eap_user
+txpower=1200
 
 if [[ ! -f "${priv_key}" || ! -f "${pub_key}" ]]; then
 	openssl req -x509 -newkey rsa:2048 -keyout "${priv_key}" -out "${pub_key}" -days 3650 -nodes -subj "/CN=lab-wifi"
@@ -45,6 +47,8 @@ sta_phy="${phy}"
 setup_ns "${ap_ns}" "${ap_phy}"
 setup_ns "${sta_ns}" "${sta_phy}"
 setup_ip "${ap_ns}" "${ip_addr}" "${ap_iface}"
+setup_txpower "${ap_ns}" "${ap_iface}" "${txpower}"
+setup_txpower "${sta_ns}" "${sta_iface}" "${txpower}"
 setup_ap "${ap_ns}" "${hostapd_conf}"
 setup_dhcp_server "${ap_ns}" "${dnsmasq_conf}"
 setup_sta "${sta_ns}" "${sta_iface}" "${wpa_supplicant_conf}"
