@@ -42,6 +42,7 @@ fi
 source src/change_mac.sh
 source src/check_dependencies.sh
 source src/cleanup_ns.sh
+source src/setup_web.sh
 
 usage(){
 	echo "Usage: sudo $0 {start|stop}"
@@ -70,6 +71,11 @@ start_lab(){
 
 stop_lab(){
 	echo "[*] Stopping the lab..."
+	stop_web "ap-opn"
+	stop_web "ap-wpa2-personal"
+	stop_web "ap-wpa2-enterprise"
+	stop_web "ap-wpa3-transition"
+	stop_web "ap-wpa3-personal"
 	killall hostapd dnsmasq wpa_supplicant dhclient iperf3
 	cleanup_ns
 	modprobe -r mac80211_hwsim

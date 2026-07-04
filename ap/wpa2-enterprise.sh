@@ -11,6 +11,7 @@ source "${base_dir}/src/setup_ip.sh"
 source "${base_dir}/src/setup_txpower.sh"
 source "${base_dir}/src/setup_ap.sh"
 source "${base_dir}/src/setup_dhcp_server.sh"
+source "${base_dir}/src/setup_web.sh"
 source "${base_dir}/src/setup_sta.sh"
 source "${base_dir}/src/gen_traffic.sh"
 
@@ -19,12 +20,14 @@ sta_iface="wlan7"
 ap_ns="ap-wpa2-enterprise"
 sta_ns="sta-wpa2-enterprise"
 ip_addr="10.10.100.1/24"
+gateway="${ip_addr%/*}"
 hostapd_conf="${base_dir}/conf/wpa2-enterprise/hostapd.conf"
 dnsmasq_conf="${base_dir}/conf/wpa2-enterprise/dnsmasq.conf"
 wpa_supplicant_conf="${base_dir}/conf/wpa2-enterprise/wpa_supplicant.conf"
 priv_key=/etc/hostapd/server.key
 pub_key=/etc/hostapd/server.pem
 eap_user=/etc/hostapd/eap_user
+web_dir="${base_dir}/conf/wpa2-enterprise/web"
 txpower=1200
 
 if [[ ! -f "${priv_key}" || ! -f "${pub_key}" ]]; then
@@ -51,5 +54,6 @@ setup_txpower "${ap_ns}" "${ap_iface}" "${txpower}"
 setup_txpower "${sta_ns}" "${sta_iface}" "${txpower}"
 setup_ap "${ap_ns}" "${hostapd_conf}"
 setup_dhcp_server "${ap_ns}" "${dnsmasq_conf}"
+setup_web "${ap_ns}" "${web_dir}"
 setup_sta "${sta_ns}" "${sta_iface}" "${wpa_supplicant_conf}"
-gen_traffic "${ap_ns}" "${sta_ns}" "10.10.100.1"
+gen_traffic "${ap_ns}" "${sta_ns}" "${gateway}"
