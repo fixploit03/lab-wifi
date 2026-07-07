@@ -1,3 +1,3 @@
 # Status
 - [X] tahapan.md
-- [ ] standar_wifi.md
+- [X] standar_wifi.md
