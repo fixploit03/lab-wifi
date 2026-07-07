@@ -55,7 +55,7 @@ Berikut ini adalah standar-standarnya:
 | Aspek | Keterangan |
 |:--:|:--|
 | Tahun Rilis | 2019 |
-| Frekuensi | 2.4 GHz, 5 GHz (Wi-Fi 6), 6 GHz (Wi-Fi 6E) |
+| Frekuensi | 2.4 GHz, 5 GHz (Wi-Fi 6) dan 6 GHz (Wi-Fi 6E) |
 | Kecepatan | 9.6 Gbps |
 | Fitur | [OFDMA](https://en.wikipedia.org/wiki/Orthogonal_frequency-division_multiple_access), [Target Wake Time (TWT)](https://academy.nordicsemi.com/courses/wi-fi-fundamentals/lessons/lesson-1-wifi-fundamentals/topic/key-features-of-wifi-6/), [BSS Coloring](https://broadbandnow.com/guides/what-is-wi-fi-6), Modulasi 1024-QAM |
 
