@@ -17,7 +17,7 @@ Berikut ini adalah standar-standarnya:
 | Tahun Rilis | 1999 |
 | Frekuensi | 2.4 GHz |
 | Kecepatan | 11 Mbps |
-| Catatan | Jangkauan luas, tapi rentan interferensi dari Bluetooth, microwave, dan perangkat lain di 2.4 GHz |
+| Catatan | Jangkauan luas, tapi rentan interferensi dari Bluetooth, microwave, dan perangkat lain di frekuensi 2.4 GHz |
 
 ## 3. 802.11a
 | Aspek | Keterangan |
@@ -25,7 +25,7 @@ Berikut ini adalah standar-standarnya:
 | Tahun Rilis | 1999 |
 | Frekuensi | 5 GHz |
 | Kecepatan | 54 Mbps |
-| Catatan | Interferensi lebih sedikit, tapi jangkauan lebih pendek dibanding 2.4 GHz |
+| Catatan | Interferensi lebih sedikit, tapi jangkauan lebih pendek dibanding frekuensi 2.4 GHz |
 
 ## 4. 802.11g
 | Aspek | Keterangan |
