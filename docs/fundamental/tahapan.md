@@ -9,14 +9,14 @@ Tahap persiapan sebelum pengujian, meliputi:
 
 ## 2. Reconnaissance
 Tahap pengumpulan informasi mengenai target pengujian, seperti:
-- `SSID`: Nama jaringan Wi-Fi
-- `BSSID`: MAC address dari Access Point
-- `STA`: Client yang terhubung ke Access Point
+- `SSID`: Nama Wi-Fi
+- `BSSID`: MAC address dari AP
+- `STA`: Client yang terhubung ke AP
 - dan lain-lain
 
 ## 3. Vulnerability Analysis
 Tahap identifikasi celah keamanan pada target, seperti:
-- Jenis enkripsi yang digunakan oleh Access Point (OPN/WEP/WPA)
+- Jenis enkripsi yang digunakan oleh AP (OPN/WEP/WPA)
 - Status WPS, aktif atau tidak
 - Kesalahan konfigurasi
 
