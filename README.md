@@ -1,47 +1,48 @@
 # lab-wifi
 
-![](img/histori.jpg)
+![](https://github.com/fixploit03/lab-wifi/blob/main/img/histori.jpg)
 
-Lab virtual untuk simulasi **Wi-Fi hacking** menggunakan [mac80211_hwsim](https://www.kernel.org/doc/html/v6.9/networking/mac80211_hwsim/mac80211_hwsim.html).
+## Daftar Isi
+- [Apa itu lab-wifi?](#apa-itu-lab-wifi)
+- [Topologi Lab](#topologi-lab)
+- [Skenario Lab](#skenario-lab)
+- [Cara Menggunakan Lab](#cara-menggunakan-lab)
+- [Disclaimer](#disclaimer)
+- [Lisensi](#lisensi)
 
-## Persyaratan
-- [Kali Linux](https://www.kali.org/)
-- Akses root ([sudo](https://idwebhost.com/blog/sudo-adalah/))
+## Apa itu lab-wifi?
+Lab virtual untuk simulasi Wi-Fi hacking menggunakan [mac80211_hwsim](https://docs.kernel.org/6.1/networking/mac80211_hwsim/mac80211_hwsim.html).
 
-## Setup Lab
+## Topologi Lab
 
-```bash
-sudo apt update
-sudo apt install -y hostapd dnsmasq wpasupplicant isc-dhcp-client aircrack-ng iw macchanger network-manager iproute2 openssl iperf3 git
-git clone https://github.com/fixploit03/lab-wifi
-cd lab-wifi
-```
-
-## Instalasi Tools
-
-```bash
-sudo apt install -y kali-tools-802-11 kali-tools-wireless
-```
-
-Perintah di atas akan menginstal semua tools yang terdapat dalam metapackage [802-11](https://www.kali.org/tools/kali-meta/#kali-tools-802-11) dan [wireless](https://www.kali.org/tools/kali-meta/#kali-tools-wireless) Kali Linux.
-
-## Penggunaan
-
-```bash
-sudo ./lab-wifi.sh start   # menjalankan lab
-sudo ./lab-wifi.sh stop    # menghentikan lab
-```
+![](https://github.com/fixploit03/lab-wifi/blob/main/img/topologi.jpg)
 
 ## Skenario Lab
-Lab ini terdiri dari **5 Access Point (AP)** dengan konfigurasi keamanan yang berbeda-beda. Masing-masing AP memiliki **1 Station (STA)** yang terhubung. Berikut jenis keamanan yang digunakan:
+| No | Jenis Keamanan | Keterangan |
+|:--:|:--|:--|
+| 1 | OPN | Tanpa enkripsi |
+| 2 | WPA2-Personal | PSK |
+| 3 | WPA2-Enterprise | 802.1X |
+| 4 | WPA3 Transition Mode | WPA2 + WPA3 |
+| 5 | WPA3-Personal | SAE |
 
-| No | Jenis Keamanan | Keterangan | Detail |
-|:--:|:--|:--|:--:|
-| 1 | OPN | Tanpa enkripsi | [Lihat](https://github.com/fixploit03/lab-wifi/blob/main/docs/skenario/opn.md) |
-| 2 | WPA2-Personal | PSK | [Lihat](https://github.com/fixploit03/lab-wifi/blob/main/docs/skenario/wpa2-personal.md) |
-| 3 | WPA2-Enterprise | 802.1X | [Lihat](https://github.com/fixploit03/lab-wifi/blob/main/docs/skenario/wpa2-enterprise.md) |
-| 4 | WPA3 Transition Mode | WPA2 + WPA3 | [Lihat](https://github.com/fixploit03/lab-wifi/blob/main/docs/skenario/wpa3-transition-mode.md) |
-| 5 | WPA3-Personal | SAE | [Lihat](https://github.com/fixploit03/lab-wifi/blob/main/docs/skenario/wpa3-personal.md) |
+## Cara Menggunakan Lab
+1. Download semua file `.ova` yang ada di halaman [Release](https://github.com/fixploit03/lab-wifi/releases).
+2. Gabungkan menjadi satu:
+   
+   ```bash
+   cat lab-wifi.ova.part-* > lab-wifi.ova
+   ```
+3. Import ke VirtualBox:
+   - Buka VirtualBox → **File → Import Appliance**
+   - Pilih file `lab-wifi.ova` hasil gabungan tadi
+   - Ikuti wizard import sampai selesai
+4. Jalankan VM:
+   - Username: `lab-wifi`
+   - Password: `lab-wifi`
+
+## Disclaimer
+Lab ini dibuat **semata-mata untuk tujuan pembelajaran, penelitian, dan meningkatkan kesadaran (awareness) terhadap keamanan jaringan Wi-Fi**. 
 
 ## Lisensi
-[MIT](LICENSE) - Rofi (Fixploit03)
+Project ini dirilis di bawah [MIT License](LICENSE).
