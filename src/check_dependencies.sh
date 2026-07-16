@@ -23,6 +23,9 @@ check_dependencies() {
 				dhclient)
 					pkg="isc-dhcp-client"
 					;;
+				wpa_supplicant)
+					pkg="wpasupplicant"
+					;;
 				*)
 					pkg="${i}"
 					;;
