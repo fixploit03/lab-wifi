@@ -4,15 +4,24 @@
 
 ## Daftar Isi
 - [Apa itu lab-wifi?](#apa-itu-lab-wifi)
+- [Persyaratan](#persyaratan)
 - [Topologi Lab](#topologi-lab)
 - [Skenario Lab](#skenario-lab)
 - [Cara Menggunakan Lab](#cara-menggunakan-lab)
+- [Catatan](#catatan)
 - [Disclaimer](#disclaimer)
 - [Lisensi](#lisensi)
 
 ## Apa itu lab-wifi?
 Lab virtual untuk simulasi Wi-Fi hacking menggunakan [mac80211_hwsim](https://docs.kernel.org/6.1/networking/mac80211_hwsim/mac80211_hwsim.html).
 
+## Persyaratan
+- Laptop/PC
+- VirtualBox 7.0+
+- RAM host: 8 GB
+- CPU: 2 core
+- Storage: 30 GB
+  
 ## Topologi Lab
 
 ![](https://github.com/fixploit03/lab-wifi/blob/main/img/topologi.jpg)
@@ -41,8 +50,14 @@ Lab virtual untuk simulasi Wi-Fi hacking menggunakan [mac80211_hwsim](https://do
    - Username: `lab-wifi`
    - Password: `lab-wifi`
 
+## Catatan
+- Untuk menjalankan lab, dibutuhkan waktu beberapa menit saat boot, jadi mohon tunggu sampai prosesnya selesai.
+- Jangan jalankan perintah `airmon-ng check kill`, karena itu bisa mematikan lab.
+
 ## Disclaimer
-Lab ini dibuat **semata-mata untuk tujuan pembelajaran, penelitian, dan meningkatkan kesadaran (awareness) terhadap keamanan jaringan Wi-Fi**. 
+Lab ini dibuat **semata-mata untuk tujuan pembelajaran, penelitian, dan meningkatkan kesadaran (awareness) terhadap keamanan jaringan Wi-Fi**.
+
+Segala bentuk penyalahgunaan di luar tujuan tersebut sepenuhnya menjadi tanggung jawab pengguna. 
 
 ## Lisensi
 Project ini dirilis di bawah [MIT License](LICENSE).
