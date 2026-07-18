@@ -13,7 +13,12 @@
 - [Lisensi](#lisensi)
 
 ## Apa itu lab-wifi?
-Lab virtual untuk simulasi Wi-Fi hacking menggunakan [mac80211_hwsim](https://docs.kernel.org/6.1/networking/mac80211_hwsim/mac80211_hwsim.html).
+
+**lab-wifi** adalah lab virtual untuk simulasi *Wi-Fi hacking* yang dibangun menggunakan [mac80211_hwsim](https://docs.kernel.org/6.1/networking/mac80211_hwsim/mac80211_hwsim.html), sebuah driver kernel Linux yang mensimulasikan perangkat wireless secara software tanpa memerlukan adapter Wi-Fi fisik atau perangkat radio tambahan.
+
+Lab ini dirancang untuk membantu siapa saja yang ingin belajar dan mempraktikkan teknik *Wi-Fi penetration testing* secara aman dan terkendali, mulai dari jaringan tanpa enkripsi (OPN) hingga skema keamanan modern seperti WPA3, tanpa risiko menyentuh jaringan produksi atau milik orang lain. Seluruh skenario dijalankan di dalam VM, sehingga dapat digunakan secara berulang, direset kapan saja, dan tidak memerlukan izin dari pihak ketiga.
+
+Cocok digunakan oleh pelajar, mahasiswa, praktisi keamanan siber, maupun siapa pun yang ingin memahami kelemahan berbagai skema keamanan Wi-Fi secara hands-on.
 
 ## Persyaratan
 - Laptop/PC
@@ -21,24 +26,25 @@ Lab virtual untuk simulasi Wi-Fi hacking menggunakan [mac80211_hwsim](https://do
 - RAM host: 8 GB
 - CPU: 2 core
 - Storage: 30 GB
-  
+
 ## Topologi Lab
 
 ![](https://github.com/fixploit03/lab-wifi/blob/main/img/topologi.jpg)
 
 ## Skenario Lab
-| No | Jenis Keamanan | Keterangan |
-|:--:|:--|:--|
-| 1 | OPN | Tanpa enkripsi |
-| 2 | WPA2-Personal | PSK |
-| 3 | WPA2-Enterprise | 802.1X |
-| 4 | WPA3 Transition Mode | WPA2 + WPA3 |
-| 5 | WPA3-Personal | SAE |
+
+| No | Jenis Keamanan | Autentikasi | Hint |
+|:--:|:--|:--|:--|
+| 1 | OPN | Tidak ada | [aircrack-ng](https://github.com/aircrack-ng/aircrack-ng) |
+| 2 | WPA2-Personal | PSK | [aircrack-ng](https://github.com/aircrack-ng/aircrack-ng) |
+| 3 | WPA2-Enterprise | EAP | [eaphammer](https://github.com/s0lst1c3/eaphammer) |
+| 4 | WPA3 Transition Mode | PSK + SAE | [dragonshift](https://github.com/jabbaw0nky/DragonShift) |
+| 5 | WPA3-Personal | SAE | [wacker](https://github.com/blunderbuss-wctf/wacker) |
 
 ## Cara Menggunakan Lab
 1. Download semua file `.ova` yang ada di halaman [Release](https://github.com/fixploit03/lab-wifi/releases).
-2. Gabungkan menjadi satu:
-   
+2. Gabungkan menjadi satu file:
+
    ```bash
    cat lab-wifi.ova.part-* > lab-wifi.ova
    ```
@@ -51,13 +57,12 @@ Lab virtual untuk simulasi Wi-Fi hacking menggunakan [mac80211_hwsim](https://do
    - Password: `lab-wifi`
 
 ## Catatan
-- Untuk menjalankan lab, dibutuhkan waktu beberapa menit saat boot, jadi mohon tunggu sampai prosesnya selesai.
-- Jangan jalankan perintah `airmon-ng check kill`, karena itu bisa mematikan lab.
+Untuk menjalankan lab, dibutuhkan waktu beberapa menit saat boot, jadi mohon tunggu sampai prosesnya selesai.
 
 ## Disclaimer
 Lab ini dibuat **semata-mata untuk tujuan pembelajaran, penelitian, dan meningkatkan kesadaran (awareness) terhadap keamanan jaringan Wi-Fi**.
 
-Segala bentuk penyalahgunaan di luar tujuan tersebut sepenuhnya menjadi tanggung jawab pengguna. 
+Segala bentuk penyalahgunaan di luar tujuan tersebut sepenuhnya menjadi tanggung jawab pengguna.
 
 ## Lisensi
 Project ini dirilis di bawah [MIT License](LICENSE).
