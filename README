@@ -30,6 +30,15 @@ Catatan
 -------
 Untuk menjalankan lab, dibutuhkan waktu beberapa menit, jadi mohon tunggu sampai prosesnya selesai.
 
+Credits
+-------
+- hostapd: https://w1.fi/hostapd/
+- dnsmasq: https://thekelleys.org.uk/dnsmasq/doc.html
+- wpa_supplicant: https://w1.fi/wpa_supplicant/
+- iperf3: https://iperf.fr/
+- isc-dhcp-client: https://www.isc.org/dhcp/
+- macchanger: https://github.com/alobbs/macchanger
+
 Lisensi
 -------
 lab ini dirilis di bawah lisensi MIT.
