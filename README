@@ -1,0 +1,35 @@
+lab-wifi
+--------
+Lab sederhana buat belajar keamanan jaringan Wi-Fi, atau bahasa kerennya itu nge-hack Wi-Fi.
+
+Persyaratan
+-----------
+- OS Linux
+- Hak akses root (sudo)
+- mac80211_hwsim
+- Beberapa tools pendukung
+
+Skenario Lab
+------------
+1. OPEN (jaringan terbuka)
+2. WEP (OSA)
+3. WPA2-Personal (PSK)
+4. WPA2-Enterprise (EAP)
+5. WPA3 Transition Mode (PSK & SAE)
+6. WPA3-Personal (SAE)
+
+Cara Menggunakan Lab
+--------------------
+sudo ./lab-wifi.sh start
+
+Catatan
+-------
+Untuk menjalankan lab, dibutuhkan waktu beberapa menit, jadi mohon tunggu sampai prosesnya selesai.
+
+Disclaimer
+----------
+Lab ini dibuat semata-mata untuk tujuan pembelajaran, penelitian, dan meningkatkan kesadaran (awareness) terhadap keamanan jaringan Wi-Fi. Segala bentuk penyalahgunaan di luar tujuan tersebut sepenuhnya menjadi tanggung jawab pengguna.
+
+Lisensi
+-------
+lab ini dirilis di bawah lisensi MIT.
